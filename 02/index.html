@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>שיעור 2 · ערכה</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@700;900&family=IBM+Plex+Sans+Hebrew:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1C2230;--soft:#3A4150;--mute:#666D7C;--line:#DCD4C5;--paper:#F4F1EA;--card:#fff;--tint:#EDE8DF;
+  --p1:#1E9A5E;--p2:#2F6BC2;--p3:#C07A12;--p4:#D2553A;
+  --serif:'Frank Ruhl Libre',serif;--sans:'IBM Plex Sans Hebrew',sans-serif;--mono:'IBM Plex Mono',monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font:17px/1.65 var(--sans)}
+.wrap{max-width:900px;margin:0 auto;padding:40px 16px 80px}
+header{border-bottom:2px solid var(--ink);padding-bottom:20px}
+header .k{font:600 13px var(--mono);letter-spacing:.12em;color:var(--mute)}
+header h1{font:900 50px/1.1 var(--serif);margin-top:8px}
+header p{color:var(--mute);margin-top:6px}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 6px}
+nav a{font:600 14px var(--sans);color:var(--ink);text-decoration:none;border:1px solid var(--line);background:var(--card);border-radius:99px;padding:6px 14px}
+section{margin-top:44px}
+.tag{font:600 12px var(--mono);letter-spacing:.12em;color:var(--c,var(--mute));display:block}
+h2{font:900 36px/1.15 var(--serif);margin:6px 0 6px}
+h3{font-size:19px;margin:24px 0 8px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 14px}
+.meta span{font:600 13px var(--sans);border:1px solid var(--line);border-radius:99px;padding:3px 12px;background:var(--card)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-top:12px}
+.story .card{border-right:4px solid var(--c)}
+.story b{color:var(--c)}
+ol.steps{list-style:none;counter-reset:s;display:flex;flex-direction:column;gap:8px;margin-top:8px}
+ol.steps li{counter-increment:s;display:flex;gap:14px;align-items:baseline}
+ol.steps li::before{content:counter(s);font:600 13px var(--mono);width:26px;height:26px;border-radius:7px;border:1px solid var(--c,var(--ink));color:var(--c,var(--ink));display:grid;place-items:center;flex:none;transform:translateY(5px)}
+.prompt{position:relative;background:var(--tint);border:1px dashed #CFC6B5;border-radius:12px;padding:16px 20px 16px 96px;margin-top:10px;white-space:pre-line}
+.prompt button{position:absolute;left:12px;top:12px;background:var(--ink);color:#fff;border:0;border-radius:8px;padding:6px 12px;font:600 13px var(--sans);cursor:pointer}
+.files{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-top:12px}
+.files a{display:flex;flex-direction:column;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;text-decoration:none;color:var(--ink);font-size:15px}
+.files a:hover{border-color:var(--p2)}
+.files a b{font:600 11px var(--mono);color:#fff;background:var(--p2);border-radius:5px;padding:2px 7px;align-self:flex-start}
+.files a.csv b{background:var(--p1)}
+.zip{display:inline-flex;align-items:center;gap:10px;margin-top:12px;background:var(--ink);color:#fff;text-decoration:none;border-radius:12px;padding:12px 20px;font-weight:600}
+table{width:100%;border-collapse:collapse;margin-top:10px;background:var(--card);font-size:15.5px}
+th,td{border:1px solid var(--line);padding:9px 12px;text-align:right;vertical-align:top}
+th{background:var(--tint);font-weight:600}
+.check li{list-style:none;padding-right:28px;position:relative;margin-top:6px}
+.check li::before{content:"";position:absolute;right:0;top:6px;width:16px;height:16px;border:2px solid var(--ink);border-radius:4px}
+.topics{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.topics div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
+.topics b{display:block;font-size:17px}.topics span{font-size:14.5px;color:var(--mute)}
+.note{font-size:14.5px;color:var(--mute);margin-top:8px}
+.warn{border-right:4px solid var(--p4)}
+@media (max-width:640px){header h1{font-size:38px}.topics{grid-template-columns:1fr}table{display:block;overflow-x:auto}.prompt{padding:52px 16px 16px}}
+@media print{nav,.prompt button,.zip{display:none}section{break-before:page}section:first-of-type{break-before:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <span class="k">שיעור 2 · עוזרים אישיים מותאמים · ChatGPT Projects</span>
+  <h1>ערכת השיעור</h1>
+  <p>בינה מלאכותית ויישומיה בארגונים · האקדמית עמק יזרעאל · קווין גל ליאקס</p>
+</header>
+<nav><a href="#files">קבצים</a><a href="#case">התרחיש</a><a href="#ex1">תרגיל 1</a><a href="#ex2">תרגיל 2</a><a href="#hw1">מטלת בית 1</a><a href="#rubric">מחוון</a></nav>
+
+<!-- FILES -->
+<section id="files" style="--c:var(--p2)">
+  <span class="tag">להורדה</span>
+  <h2>חמשת הקבצים של מרפאות אופק</h2>
+  <p>הורידו למחשב. בדיוק 5 קבצים, כי זו מגבלת החינם של ChatGPT Projects.</p>
+  <div class="files">
+    <a href="files/01_פרופיל_הארגון.pdf" download><b>PDF · 01</b>פרופיל הארגון</a>
+    <a href="files/02_נוהל_קליטת_עובדים.pdf" download><b>PDF · 02</b>נוהל קליטת עובדים</a>
+    <a href="files/03_פרוטוקול_ישיבת_הנהלה.pdf" download><b>PDF · 03</b>פרוטוקול ישיבת הנהלה</a>
+    <a href="files/04_ראיונות_יציאה.pdf" download><b>PDF · 04</b>ראיונות יציאה</a>
+    <a class="csv" href="files/05_סקר_שביעות_רצון_עובדים.csv" download><b>CSV · 05</b>סקר עובדים, 150 שורות</a>
+  </div>
+  <a class="zip" href="files/ofek_clinics_files.zip" download>הורדת כל 5 הקבצים (ZIP)</a>
+  <p class="note">מרפאות אופק הוא ארגון בדוי. כל השמות והנתונים הומצאו לצורך הקורס.</p>
+</section>
+
+<!-- CASE -->
+<section id="case" class="story" style="--c:var(--p2)">
+  <span class="tag">התרחיש</span>
+  <h2>אתם צוות הייעוץ של מרפאות אופק</h2>
+  <div class="card" style="--c:var(--p2)"><b>הארגון.</b> רשת של 12 מרפאות קהילה בצפון, כ-400 עובדים. אנשי הקבלה עוזבים: 30 מתוך 74 בשנה האחרונה, בממוצע אחרי 6 חודשים.</div>
+  <div class="card" style="--c:var(--p3)"><b>ספטמבר 2026.</b> בישיבת ההנהלה היו שתי עמדות. המנכ״ל, אבי כהן: ״הבעיה היא השכר״. מנהלת מרפאת נצרת, רונית שחר: ״הן נזרקות לדלפק לבד בשבוע השני״.</div>
+  <div class="card" style="--c:var(--p4)"><b>ההחלטה.</b> העלאת שכר תעלה כ-460,000 ₪ בשנה. ההנהלה החליטה להזמין ייעוץ ארגוני לפני שמחליטים, וההחלטה על שכר נדחתה לדצמבר.</div>
+  <div class="card" style="--c:var(--p1)"><b>אתם.</b> צוות הייעוץ. דנה אברהם, מנהלת משאבי האנוש, שלחה לכם 5 קבצים. המשימה: להבין למה אנשי הקבלה עוזבים, ולהביא להנהלה ממצאים עם מקור. השאלה הגדולה: שכר, או משהו אחר?</div>
+</section>
+
+<!-- EX 1 -->
+<section id="ex1" style="--c:var(--p3)">
+  <span class="tag">תרגיל 1</span>
+  <h2>בונים את עוזר האבחון</h2>
+  <div class="meta"><span>25 דקות</span><span>לבד, אפשר לשבת בזוגות</span><span>ChatGPT Projects, גרסה חינמית</span></div>
+  <p><b>מטרה:</b> לבנות עוזר שעונה רק מתוך 5 הקבצים, מציין מקור לכל טענה, ומודה כשמשהו לא מופיע.</p>
+  <h3>שלבים</h3>
+  <ol class="steps">
+    <li>הורידו את 5 הקבצים (למעלה).</li>
+    <li>ב-ChatGPT: בסרגל הצד Projects ← פרויקט חדש. שם: ״עוזר אבחון · מרפאות אופק״.</li>
+    <li>בהגדרות הפרויקט ← Instructions ← הדביקו את ההוראות שלמטה.</li>
+    <li>Add files ← העלו את 5 הקבצים.</li>
+    <li>פתחו שיחה חדשה בתוך הפרויקט, והריצו את 3 שאלות הבדיקה.</li>
+  </ol>
+  <h3>ההוראות להדבקה</h3>
+  <div class="prompt"><button data-copy>העתקה</button><span>תפקיד: אתה עוזר אבחון ארגוני של צוות ייעוץ שעובד עם רשת "מרפאות אופק".
+מטרה: לעזור לנו להבין את הסיבות לתחלופה באנשי הקבלה והאחיות, ולהכין חומרים להנהלה.
+שיטה: לפני משימה גדולה, שאל עד 3 שאלות הבהרה. עבוד צעד אחר צעד.
+מקורות: ענה רק על סמך הקבצים המצורפים, וציין שם קובץ לכל טענה. אם מידע לא מופיע, כתוב ״לא מופיע בקבצים״.
+פורמט: עברית פשוטה. טבלה כשמשווים. עד 200 מילים, אלא אם ביקשנו יותר.
+גבולות: אל תמציא נתונים או ציטוטים. אל תציע פתרונות לפני שהצגת ממצאים.</span></div>
+  <h3>3 שאלות בדיקה</h3>
+  <div class="prompt"><button data-copy>העתקה</button><span>1. באילו מרפאות התחלופה באנשי הקבלה הכי גבוהה?
+2. מה הפער בין נוהל הקליטה למה שמתארים העובדים?
+3. מה התקציב השנתי לגיוס עובדים?</span></div>
+  <table>
+    <tr><th>#</th><th>מה השאלה בודקת</th><th>תשובה טובה</th></tr>
+    <tr><td>1</td><td>שליפת עובדה מקובץ</td><td>צפת, בית שאן, נצרת וטבריה. עם ציון קובץ 01.</td></tr>
+    <tr><td>2</td><td>חיבור בין שני קבצים</td><td>בנוהל: שבועיים וחונך (02). בפועל: יומיים ובלי חונך (03, 04).</td></tr>
+    <tr><td>3</td><td>מלכודת: המידע לא קיים</td><td>״לא מופיע בקבצים״. כל מספר אחר הוא המצאה.</td></tr>
+  </table>
+  <h3>העוזר נכשל?</h3>
+  <p>הוסיפו שורה אחת להוראות, למשל: ״אם מספר לא מופיע בקבצים, אל תעריך. כתוב ׳לא מופיע בקבצים׳.״ פתחו שיחה חדשה בפרויקט, והריצו שוב את 3 השאלות.</p>
+  <h3>בדיקה עצמית</h3>
+  <ul class="check">
+    <li>העוזר מנה את כל 5 הקבצים כששאלתי ״מנה את הקבצים שיש לך״.</li>
+    <li>ליד כל טענה בתשובות מופיע מספר או שם קובץ.</li>
+    <li>בשאלה 3 העוזר כתב שהמידע לא מופיע, ולא המציא מספר.</li>
+  </ul>
+</section>
+
+<!-- EX 2 -->
+<section id="ex2" style="--c:var(--p3)">
+  <span class="tag">תרגיל 2</span>
+  <h2>העוזר עובד בשבילכם: תוצר לדנה</h2>
+  <div class="meta"><span>20 דקות</span><span>לבד</span><span>בתוך הפרויקט מתרגיל 1</span></div>
+  <p><b>מטרה:</b> בתרגיל 1 בניתם ובדקתם את העוזר. עכשיו העוזר מפיק תוצר אמיתי שאפשר לשלוח ללקוחה, ואתם בודקים שהוא נשען על הקבצים.</p>
+  <h3>בחרו משימה אחת</h3>
+  <p><b>A · דף ממצאים להנהלה</b></p>
+  <div class="prompt"><button data-copy>העתקה</button><span>כתוב דף ממצאים של עמוד אחד להנהלת מרפאות אופק: 3 הסיבות המרכזיות לעזיבת אנשי קבלה. לכל סיבה: משפט הסבר, ציטוט אחד מהראיונות, ושם הקובץ. בסוף: שאלה אחת שעדיין פתוחה.</span></div>
+  <p style="margin-top:14px"><b>B · ניתוח הסקר</b></p>
+  <div class="prompt"><button data-copy>העתקה</button><span>נתח את קובץ הסקר (05). איזו מרפאה ואיזה תפקיד נמצאים בסיכון הכי גבוה לעזיבה? הצג טבלה: מרפאה · תפקיד · ציון שביעות רצון ממוצע · כמה שוקלים לעזוב. ציין איך חישבת.</span></div>
+  <p style="margin-top:14px"><b>C · מייל לדנה</b></p>
+  <div class="prompt"><button data-copy>העתקה</button><span>נסח מייל קצר לדנה אברהם, מנהלת משאבי האנוש: מה מצאנו עד עכשיו (3 נקודות, עם מקור לכל אחת), ומה אנחנו מציעים לבדוק בשלב הבא. עד 150 מילים, טון מקצועי.</span></div>
+  <h3>חובה בסוף: בודקים טענה אחת</h3>
+  <ol class="steps">
+    <li>בחרו טענה אחת מהתוצר, רצוי עם מספר או ציטוט.</li>
+    <li>פתחו את הקובץ שהעוזר ציין, ומצאו אותה שם.</li>
+    <li>רשמו: נמצאה כמו שהיא · נמצאה בשינוי · לא נמצאה.</li>
+  </ol>
+  <p class="note">סיימתם מהר? בחרו משימה נוספת, או בקשו מהעוזר: ״מה החולשה הכי גדולה בדף הממצאים שכתבת?״</p>
+</section>
+
+<!-- HW1 -->
+<section id="hw1" style="--c:var(--p2)">
+  <span class="tag">מטלת בית 1 · 10% מהציון</span>
+  <h2>עוזר מחקר ודוח ארגוני</h2>
+  <div class="meta"><span>הגשה: שבוע 4</span><span>בזוגות</span><span>מסמך אחד, עד 6 עמודים</span></div>
+  <h3>בחרו נושא אחד</h3>
+  <div class="topics">
+    <div><b>שחיקה בעבודה</b><span>למה עובדים נשחקים, ומה ארגונים עושים</span></div>
+    <div><b>עבודה היברידית</b><span>השפעה על צוותים, תקשורת ושייכות</span></div>
+    <div><b>קליטת עובדים חדשים</b><span>מה עובד ב-90 הימים הראשונים</span></div>
+    <div><b>שימור עובדים צעירים</b><span>מה גורם לדור Z להישאר או לעזוב</span></div>
+    <div><b>גיוון והכלה</b><span>מה עובד בפועל, ומה נשאר על הנייר</span></div>
+    <div><b>AI בארגונים</b><span>איך תפקידים משתנים, ומה עובדים מרגישים</span></div>
+  </div>
+  <h3>חלק א׳: עוזר מחקר (מהיום)</h3>
+  <ol class="steps">
+    <li>אספו 3-5 מקורות ציבוריים על הנושא: כתבות, דוחות, מחקרים. שמרו כ-PDF.</li>
+    <li>בנו פרויקט ב-ChatGPT: הוראות לפי 6 השורות, והמקורות כקבצים.</li>
+    <li>כתבו 3 שאלות בדיקה: עובדה, חיבור בין מקורות, ומלכודת (משהו שלא מופיע).</li>
+    <li>הריצו, תעדו את התשובות, תקנו שורה אחת בהוראות, והריצו שוב.</li>
+  </ol>
+  <h3>חלק ב׳: דוח מחקר (אחרי שיעור 3)</h3>
+  <ol class="steps">
+    <li>נסחו שאלת מחקר על הנושא, למשל: ״מה גורם לשחיקה בקרב עובדי שירות?״</li>
+    <li>חקרו עם Perplexity או Deep Research, ונתחו עם העוזר מחלק א׳.</li>
+    <li>כתבו דוח של עד 2 עמודים: 3-5 ממצאים, ומה המשמעות לארגונים.</li>
+    <li>טבלת אימות: 5 טענות מהדוח · המקור · האם הטענה באמת מופיעה במקור · הערות.</li>
+  </ol>
+  <h3>מה מגישים</h3>
+  <p>מסמך אחד: הנושא והמקורות, ההוראות, טבלת שאלות הבדיקה והתיקון, הדוח, וטבלת האימות.</p>
+</section>
+
+<!-- RUBRIC -->
+<section id="rubric" style="--c:var(--p1)">
+  <span class="tag">מחוון · מטלת בית 1</span>
+  <h2>100 נקודות</h2>
+  <table>
+    <tr><th>רכיב</th><th>נק׳</th><th>מלא</th><th>חלקי</th></tr>
+    <tr><td><b>הוראות העוזר</b></td><td>20</td><td>6 השורות, מותאמות לנושא, כוללות מקורות וגבולות</td><td>חסרות שורות, או הוראות כלליות</td></tr>
+    <tr><td><b>מקורות ובדיקות</b></td><td>20</td><td>3-5 מקורות רלוונטיים, 3 שאלות מהסוגים השונים, תיקון אחד עם תוצאה</td><td>פחות מקורות, או בלי תיקון</td></tr>
+    <tr><td><b>איכות הממצאים</b></td><td>25</td><td>שאלת מחקר ברורה, 3-5 ממצאים, משמעות לארגונים</td><td>ממצאים כלליים, או העתקה של תשובת הכלי</td></tr>
+    <tr><td><b>טבלת אימות מקורות</b></td><td>25</td><td>5 טענות, כל מקור נפתח ונבדק, כולל טענות שלא נמצאו</td><td>חלק מהמקורות לא נבדקו</td></tr>
+    <tr><td><b>כתיבה ותיעוד</b></td><td>10</td><td>קצר ומסודר</td><td>ארוך או לא מסודר</td></tr>
+  </table>
+  <p class="note">טבלת אימות שמראה בכנות טענה שלא נמצאה במקור מקבלת ניקוד מלא. זה בדיוק מה שהמטלה בודקת.</p>
+</section>
+</div>
+<script>
+document.querySelectorAll('[data-copy]').forEach(b=>b.onclick=()=>{const t=b.nextElementSibling.innerText;
+  const ok=()=>{b.textContent='הועתק ✓';setTimeout(()=>b.textContent='העתקה',1500)};
+  try{navigator.clipboard.writeText(t).then(ok,()=>{const r=document.createRange();r.selectNodeContents(b.nextElementSibling);getSelection().removeAllRanges();getSelection().addRange(r);b.textContent='סומן: Ctrl+C'})}catch(e){}});
+</script>
+</body>
+</html>

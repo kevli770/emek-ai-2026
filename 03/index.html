@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>שיעור 3 · ערכה</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@700;900&family=IBM+Plex+Sans+Hebrew:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1C2230;--soft:#3A4150;--mute:#666D7C;--line:#DCD4C5;--paper:#F4F1EA;--card:#fff;--tint:#EDE8DF;
+  --p1:#1E9A5E;--p2:#2F6BC2;--p3:#C07A12;--p4:#D2553A;
+  --serif:'Frank Ruhl Libre',serif;--sans:'IBM Plex Sans Hebrew',sans-serif;--mono:'IBM Plex Mono',monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font:17px/1.65 var(--sans)}
+.wrap{max-width:900px;margin:0 auto;padding:40px 16px 80px}
+header{border-bottom:2px solid var(--ink);padding-bottom:20px}
+header .k{font:600 13px var(--mono);letter-spacing:.12em;color:var(--mute)}
+header h1{font:900 50px/1.1 var(--serif);margin-top:8px}
+header p{color:var(--mute);margin-top:6px}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 6px}
+nav a{font:600 14px var(--sans);color:var(--ink);text-decoration:none;border:1px solid var(--line);background:var(--card);border-radius:99px;padding:6px 14px}
+section{margin-top:44px}
+.tag{font:600 12px var(--mono);letter-spacing:.12em;color:var(--c,var(--mute));display:block}
+h2{font:900 36px/1.15 var(--serif);margin:6px 0 6px}
+h3{font-size:19px;margin:24px 0 8px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 14px}
+.meta span{font:600 13px var(--sans);border:1px solid var(--line);border-radius:99px;padding:3px 12px;background:var(--card)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-top:12px}
+ol.steps{list-style:none;counter-reset:s;display:flex;flex-direction:column;gap:8px;margin-top:8px}
+ol.steps li{counter-increment:s;display:flex;gap:14px;align-items:baseline}
+ol.steps li::before{content:counter(s);font:600 13px var(--mono);width:26px;height:26px;border-radius:7px;border:1px solid var(--c,var(--ink));color:var(--c,var(--ink));display:grid;place-items:center;flex:none;transform:translateY(5px)}
+.prompt{position:relative;background:var(--tint);border:1px dashed #CFC6B5;border-radius:12px;padding:16px 20px 16px 96px;margin-top:10px;white-space:pre-line}
+.prompt button{position:absolute;left:12px;top:12px;background:var(--ink);color:#fff;border:0;border-radius:8px;padding:6px 12px;font:600 13px var(--sans);cursor:pointer}
+.dl{display:inline-flex;align-items:center;gap:10px;margin-top:12px;background:var(--ink);color:#fff;text-decoration:none;border-radius:12px;padding:12px 20px;font-weight:600}
+table{width:100%;border-collapse:collapse;margin-top:10px;background:var(--card);font-size:15.5px}
+th,td{border:1px solid var(--line);padding:9px 12px;text-align:right;vertical-align:top}
+th{background:var(--tint);font-weight:600}
+td.blank{height:44px}
+.chip{display:inline-block;font:700 13px var(--sans);color:#fff;border-radius:99px;padding:2px 10px}
+.check li{list-style:none;padding-right:28px;position:relative;margin-top:6px}
+.check li::before{content:"";position:absolute;right:0;top:6px;width:16px;height:16px;border:2px solid var(--ink);border-radius:4px}
+.note{font-size:14.5px;color:var(--mute);margin-top:8px}
+@media (max-width:640px){header h1{font-size:38px}table{display:block;overflow-x:auto}.prompt{padding:52px 16px 16px}}
+@media print{nav,.prompt button,.dl{display:none}section{break-before:page}section:first-of-type{break-before:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <span class="k">שיעור 3 · מחקר ואימות מקורות · Perplexity</span>
+  <h1>ערכת השיעור</h1>
+  <p>בינה מלאכותית ויישומיה בארגונים · האקדמית עמק יזרעאל · קווין גל ליאקס</p>
+</header>
+<nav><a href="#ex1">תרגיל 1</a><a href="#ex2">תרגיל 2</a><a href="#method">השיטה</a><a href="#hw">מטלה 1 · חלק ב׳</a><a href="../02/">ערכת שיעור 2</a></nav>
+
+<!-- EX 1 -->
+<section id="ex1" style="--c:var(--p3)">
+  <span class="tag">תרגיל 1</span>
+  <h2>מחקר ב-Perplexity בשביל דנה</h2>
+  <div class="meta"><span>25 דקות</span><span>בזוגות</span><span>perplexity.ai, גרסה חינמית</span></div>
+  <p><b>מטרה:</b> לאסוף 5 ממצאים מהמחקר והדוחות על תחלופה של אנשי קבלה ושירות, עם מקור לכל ממצא. זה ההקשר הרחב למה שראינו בקבצים של מרפאות אופק.</p>
+  <h3>שלבים</h3>
+  <ol class="steps">
+    <li>פתחו את perplexity.ai (אפשר בלי חשבון, עדיף עם חשבון כדי לשמור את השיחה).</li>
+    <li>הדביקו את הפרומפט, ושמרו את 5 הממצאים עם מספרי המקורות.</li>
+    <li>שאלת המשך באותה שיחה: ״מאילו מהמקורות האלה כדאי להיזהר, ולמה?״</li>
+  </ol>
+  <h3>הפרומפט</h3>
+  <div class="prompt"><button data-copy>העתקה</button><span>מטרה: להבין מה ידוע על תחלופת עובדים בתפקידי קבלה ושירות במרפאות, ומה עוזר להקטין אותה.
+הקשר: אני סטודנט לייעוץ ארגוני. אני עובד על מקרה של רשת מרפאות שבה 40% מאנשי הקבלה עוזבים בשנה.
+תוצר: 5 ממצאים. לכל ממצא משפט אחד ומקור. בסוף: מה עדיין לא ידוע.
+מגבלות: העדף מחקרים, דוחות רשמיים וסקרים על פני בלוגים. ציין שנה לכל מקור. ענה בעברית.</span></div>
+  <p class="note">סיימתם מהר? אותה שאלה על אחיות במרפאות, או על הנושא שבחרתם למטלה.</p>
+</section>
+
+<!-- EX 2 -->
+<section id="ex2" style="--c:var(--p3)">
+  <span class="tag">תרגיל 2</span>
+  <h2>בודקים 5 טענות מול המקור</h2>
+  <div class="meta"><span>20 דקות</span><span>באותם זוגות</span></div>
+  <p><b>מטרה:</b> לבדוק שמה שהכלי כתב באמת מופיע במקור שהוא ציין.</p>
+  <a class="dl" href="files/טבלת_אימות_מקורות.docx" download>הורדת תבנית טבלת האימות (Word)</a>
+  <h3>שלבים</h3>
+  <ol class="steps">
+    <li>בחרו 5 טענות מתרגיל 1, לפחות אחת עם מספר. כל אחד בודק 2-3.</li>
+    <li>פתחו את המקור, וחפשו עם Ctrl+F מילה או מספר מהטענה.</li>
+    <li>סמנו תוצאה: נמצא · נמצא בשינוי · לא נמצא · לא נפתח.</li>
+    <li>לכל מקור: מי כתב, מתי, ואיזה סוג מקור (מחקר, סקר, כתבה, בלוג).</li>
+  </ol>
+  <h3>הטבלה</h3>
+  <table>
+    <tr><th>#</th><th style="width:32%">טענה</th><th>מקור</th><th>תוצאה</th><th>הערה</th></tr>
+    <tr><td>1</td><td class="blank"></td><td></td><td></td><td></td></tr>
+    <tr><td>2</td><td class="blank"></td><td></td><td></td><td></td></tr>
+    <tr><td>3</td><td class="blank"></td><td></td><td></td><td></td></tr>
+    <tr><td>4</td><td class="blank"></td><td></td><td></td><td></td></tr>
+    <tr><td>5</td><td class="blank"></td><td></td><td></td><td></td></tr>
+  </table>
+  <p class="note">מקור באנגלית? מותר להדביק את הקטע לצ׳אט ולבקש תרגום. ההחלטה ״נמצא או לא״ היא שלכם, מול הטקסט המקורי.</p>
+  <h3>בדיקה עצמית</h3>
+  <ul class="check">
+    <li>פתחתי בעצמי כל אחד מ-5 המקורות.</li>
+    <li>יש בטבלה לפחות תוצאה אחת שאינה ״נמצא״. אם הכול נמצא, בדקתי שוב את הטענה עם המספר.</li>
+    <li>לכל מקור רשמתי מי כתב ומתי.</li>
+  </ul>
+</section>
+
+<!-- METHOD -->
+<section id="method" style="--c:var(--p1)">
+  <span class="tag">דף עזר</span>
+  <h2>ארבע תוצאות, וארבע שאלות על המקור</h2>
+  <table>
+    <tr><th>תוצאה</th><th>מה זה אומר</th><th>מה עושים</th></tr>
+    <tr><td><span class="chip" style="background:var(--p1)">נמצא</span></td><td>כתוב במקור, כמו שהוא</td><td>משתמשים, עם הפניה</td></tr>
+    <tr><td><span class="chip" style="background:var(--p3)">נמצא בשינוי</span></td><td>כתוב, אבל אחרת: מספר אחר, הקשר אחר, הכללה</td><td>מתקנים לפי המקור</td></tr>
+    <tr><td><span class="chip" style="background:var(--p4)">לא נמצא</span></td><td>המקור לא אומר את זה</td><td>מוחקים, או מחפשים מקור אחר</td></tr>
+    <tr><td><span class="chip" style="background:#9298A4">לא נפתח</span></td><td>קישור שבור, חסום או בתשלום</td><td>לא מסתמכים עד שנמצא מקור שנפתח</td></tr>
+  </table>
+  <h3>איכות המקור</h3>
+  <ul style="padding-right:20px">
+    <li><b>מי כתב?</b> חוקר, משרד ממשלתי, עיתונאי, חברה מסחרית.</li>
+    <li><b>מתי?</b> נתון ישן על שוק העבודה כבר לא מתאר את היום.</li>
+    <li><b>מה סוג המקור?</b> מחקר, סקר, כתבה, בלוג.</li>
+    <li><b>יש לו אינטרס?</b> חברה שמוכרת את הפתרון לבעיה שהיא מתארת.</li>
+  </ul>
+  <h3>דגלים אדומים בתשובה של AI</h3>
+  <p>מספר מדויק מדי · שם של מחקר או מוסד · ציטוט במירכאות עם שם של אדם · קישור. כל אחד מהם הוא סימן לבדוק, לא הוכחה לטעות.</p>
+</section>
+
+<!-- HOMEWORK -->
+<section id="hw" style="--c:var(--p2)">
+  <span class="tag">מטלת בית 1 · חלק ב׳</span>
+  <h2>דוח מחקר עם טבלת אימות</h2>
+  <div class="meta"><span>הגשה: שבוע 4</span><span>בזוגות</span><span>מסמך אחד עם חלק א׳</span><span>10% מהציון</span></div>
+  <ol class="steps">
+    <li>על הנושא שבחרתם בחלק א׳: נסחו שאלת מחקר אחת, ממוקדת.</li>
+    <li>חקרו ב-Perplexity, עם תבנית הפרומפט מתרגיל 1. Deep Research מותר, אבל לא חובה.</li>
+    <li>נתחו וכתבו בעזרת העוזר שבניתם בחלק א׳.</li>
+    <li>דוח של עד 2 עמודים: 3-5 ממצאים, ומה המשמעות לארגונים.</li>
+    <li>טבלת אימות של 5 טענות מהדוח, לפי התבנית.</li>
+  </ol>
+  <p>ההנחיות המלאות לחלק א׳ והמחוון נמצאים ב<a href="../02/#hw1">ערכת שיעור 2</a>. טבלת אימות שמראה בכנות טענה שלא נמצאה מקבלת ניקוד מלא.</p>
+</section>
+</div>
+<script>
+document.querySelectorAll('[data-copy]').forEach(b=>b.onclick=()=>{const t=b.nextElementSibling.innerText;
+  const ok=()=>{b.textContent='הועתק ✓';setTimeout(()=>b.textContent='העתקה',1500)};
+  try{navigator.clipboard.writeText(t).then(ok,()=>{const r=document.createRange();r.selectNodeContents(b.nextElementSibling);getSelection().removeAllRanges();getSelection().addRange(r);b.textContent='סומן: Ctrl+C'})}catch(e){}});
+</script>
+</body>
+</html>

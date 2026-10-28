@@ -14,7 +14,7 @@
   --serif:'Frank Ruhl Libre',serif;--sans:'IBM Plex Sans Hebrew',sans-serif;--mono:'IBM Plex Mono',monospace}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--paper);color:var(--ink);font:17px/1.65 var(--sans)}
-.wrap{max-width:900px;margin:0 auto;padding:40px 16px 80px}
+.wrap{max-width:860px;margin:0 auto;padding:40px 16px 80px}
 header{border-bottom:2px solid var(--ink);padding-bottom:20px}
 header .k{font:600 13px var(--mono);letter-spacing:.12em;color:var(--mute)}
 header h1{font:900 50px/1.1 var(--serif);margin-top:8px}
@@ -33,115 +33,133 @@ ol.steps li{counter-increment:s;display:flex;gap:14px;align-items:baseline}
 ol.steps li::before{content:counter(s);font:600 13px var(--mono);width:26px;height:26px;border-radius:7px;border:1px solid var(--c,var(--ink));color:var(--c,var(--ink));display:grid;place-items:center;flex:none;transform:translateY(5px)}
 .prompt{position:relative;background:var(--tint);border:1px dashed #CFC6B5;border-radius:12px;padding:16px 20px 16px 96px;margin-top:10px;white-space:pre-line}
 .prompt button{position:absolute;left:12px;top:12px;background:var(--ink);color:#fff;border:0;border-radius:8px;padding:6px 12px;font:600 13px var(--sans);cursor:pointer}
-.dl{display:inline-flex;align-items:center;gap:10px;margin-top:12px;background:var(--ink);color:#fff;text-decoration:none;border-radius:12px;padding:12px 20px;font-weight:600}
 table{width:100%;border-collapse:collapse;margin-top:10px;background:var(--card);font-size:15.5px}
 th,td{border:1px solid var(--line);padding:9px 12px;text-align:right;vertical-align:top}
 th{background:var(--tint);font-weight:600}
-td.blank{height:44px}
-.chip{display:inline-block;font:700 13px var(--sans);color:#fff;border-radius:99px;padding:2px 10px}
-.check li{list-style:none;padding-right:28px;position:relative;margin-top:6px}
-.check li::before{content:"";position:absolute;right:0;top:6px;width:16px;height:16px;border:2px solid var(--ink);border-radius:4px}
+.topics{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.topics div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
+.topics b{display:block;font-size:17px}.topics span{font-size:14.5px;color:var(--mute)}
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:12px}
+.flow div{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--c);border-radius:12px;padding:12px}
+.flow b{font:900 26px/1 var(--serif);color:var(--c);display:block}
+.flow span{font-size:14.5px;display:block;margin-top:4px}
+.flow small{font:600 11px var(--mono);color:var(--c)}
+.dl{display:inline-flex;align-items:center;gap:10px;margin-top:12px;background:var(--ink);color:#fff;text-decoration:none;border-radius:12px;padding:10px 18px;font-weight:600;font-size:15px}
 .note{font-size:14.5px;color:var(--mute);margin-top:8px}
-@media (max-width:640px){header h1{font-size:38px}table{display:block;overflow-x:auto}.prompt{padding:52px 16px 16px}}
-@media print{nav,.prompt button,.dl{display:none}section{break-before:page}section:first-of-type{break-before:auto}}
+@media (max-width:640px){header h1{font-size:38px}.topics{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}table{display:block;overflow-x:auto}.prompt{padding:52px 16px 16px}}
+@media print{nav,.prompt button,.dl{display:none}}
 </style>
 </head>
 <body>
 <div class="wrap">
 <header>
-  <span class="k">שיעור 3 · מחקר ואימות מקורות · Perplexity</span>
+  <span class="k">שיעור 3 · חיפוש ומחקר עם AI · Perplexity · Gemini</span>
   <h1>ערכת השיעור</h1>
   <p>בינה מלאכותית ויישומיה בארגונים · האקדמית עמק יזרעאל · קווין גל ליאקס</p>
 </header>
-<nav><a href="#ex1">תרגיל 1</a><a href="#ex2">תרגיל 2</a><a href="#method">השיטה</a><a href="#hw">מטלה 1 · חלק ב׳</a><a href="../02/">ערכת שיעור 2</a></nav>
+<nav><a href="#ex1">תרגיל 1</a><a href="#ex2">תרגיל 2</a><a href="#hw">מטלת בית 1</a><a href="../02/">ערכת שיעור 2</a></nav>
 
 <!-- EX 1 -->
 <section id="ex1" style="--c:var(--p3)">
-  <span class="tag">תרגיל 1</span>
-  <h2>מחקר ב-Perplexity בשביל דנה</h2>
-  <div class="meta"><span>25 דקות</span><span>בזוגות</span><span>perplexity.ai, גרסה חינמית</span></div>
-  <p><b>מטרה:</b> לאסוף 5 ממצאים מהמחקר והדוחות על תחלופה של אנשי קבלה ושירות, עם מקור לכל ממצא. זה ההקשר הרחב למה שראינו בקבצים של מרפאות אופק.</p>
-  <h3>שלבים</h3>
+  <span class="tag">תרגיל 1 · 20 דקות</span>
+  <h2>שלושה חיפושים ב-Perplexity</h2>
+  <p>פתחו את <b>perplexity.ai</b> או את האפליקציה.</p>
+  <h3>1. חפשו את עצמכם</h3>
+  <div class="prompt"><button data-copy>העתקה</button><span>מי זה [שם מלא], [עיר או תחום לימודים]?</span></div>
+  <p class="note">מה נכון? מה חסר? יש ערבוב עם אדם אחר באותו שם? לא רוצים לחפש את עצמכם? חפשו דמות ציבורית.</p>
+  <h3>2. חפשו נושא: מרפאות אופק</h3>
+  <div class="prompt"><button data-copy>העתקה</button><span>מה גורם לתחלופה של עובדי קבלה ושירות במרפאות, ומה עוזר להקטין אותה? תן 5 ממצאים, ולכל אחד מקור ושנה. העדף מחקרים ודוחות על פני בלוגים. ענה בעברית.</span></div>
+  <h3>3. שאלת המשך, ובדיקה של מקור</h3>
   <ol class="steps">
-    <li>פתחו את perplexity.ai (אפשר בלי חשבון, עדיף עם חשבון כדי לשמור את השיחה).</li>
-    <li>הדביקו את הפרומפט, ושמרו את 5 הממצאים עם מספרי המקורות.</li>
-    <li>שאלת המשך באותה שיחה: ״מאילו מהמקורות האלה כדאי להיזהר, ולמה?״</li>
+    <li>לחצו על אחת משאלות ההמשך שמופיעות מתחת לתשובה.</li>
+    <li>בחרו טענה אחת, לחצו על מספר המקור שלה, וחפשו אותה במקור עם Ctrl+F.</li>
+    <li>סמנו: נמצא · נמצא בשינוי · לא נמצא · לא נפתח.</li>
   </ol>
-  <h3>הפרומפט</h3>
-  <div class="prompt"><button data-copy>העתקה</button><span>מטרה: להבין מה ידוע על תחלופת עובדים בתפקידי קבלה ושירות במרפאות, ומה עוזר להקטין אותה.
-הקשר: אני סטודנט לייעוץ ארגוני. אני עובד על מקרה של רשת מרפאות שבה 40% מאנשי הקבלה עוזבים בשנה.
-תוצר: 5 ממצאים. לכל ממצא משפט אחד ומקור. בסוף: מה עדיין לא ידוע.
-מגבלות: העדף מחקרים, דוחות רשמיים וסקרים על פני בלוגים. ציין שנה לכל מקור. ענה בעברית.</span></div>
-  <p class="note">סיימתם מהר? אותה שאלה על אחיות במרפאות, או על הנושא שבחרתם למטלה.</p>
 </section>
 
 <!-- EX 2 -->
-<section id="ex2" style="--c:var(--p3)">
-  <span class="tag">תרגיל 2</span>
-  <h2>בודקים 5 טענות מול המקור</h2>
-  <div class="meta"><span>20 דקות</span><span>באותם זוגות</span></div>
-  <p><b>מטרה:</b> לבדוק שמה שהכלי כתב באמת מופיע במקור שהוא ציין.</p>
-  <a class="dl" href="files/טבלת_אימות_מקורות.docx" download>הורדת תבנית טבלת האימות (Word)</a>
-  <h3>שלבים</h3>
+<section id="ex2" style="--c:var(--p2)">
+  <span class="tag">תרגיל 2 · 15 דקות · בזוגות</span>
+  <h2>מתחילים את המטלה: Deep Research</h2>
   <ol class="steps">
-    <li>בחרו 5 טענות מתרגיל 1, לפחות אחת עם מספר. כל אחד בודק 2-3.</li>
-    <li>פתחו את המקור, וחפשו עם Ctrl+F מילה או מספר מהטענה.</li>
-    <li>סמנו תוצאה: נמצא · נמצא בשינוי · לא נמצא · לא נפתח.</li>
-    <li>לכל מקור: מי כתב, מתי, ואיזה סוג מקור (מחקר, סקר, כתבה, בלוג).</li>
+    <li>בחרו נושא מהרשימה של מטלת הבית (למטה).</li>
+    <li>היכנסו ל-<b>gemini.google.com</b>, לחצו על + ליד שורת הכתיבה, ובחרו Deep Research.</li>
+    <li>הדביקו את הפרומפט, אשרו את תוכנית המחקר, וחכו 5-10 דקות.</li>
+    <li>מהדוח: בחרו 3 מקורות שמתאימים למטלה, ופתחו אותם.</li>
   </ol>
-  <h3>הטבלה</h3>
-  <table>
-    <tr><th>#</th><th style="width:32%">טענה</th><th>מקור</th><th>תוצאה</th><th>הערה</th></tr>
-    <tr><td>1</td><td class="blank"></td><td></td><td></td><td></td></tr>
-    <tr><td>2</td><td class="blank"></td><td></td><td></td><td></td></tr>
-    <tr><td>3</td><td class="blank"></td><td></td><td></td><td></td></tr>
-    <tr><td>4</td><td class="blank"></td><td></td><td></td><td></td></tr>
-    <tr><td>5</td><td class="blank"></td><td></td><td></td><td></td></tr>
-  </table>
-  <p class="note">מקור באנגלית? מותר להדביק את הקטע לצ׳אט ולבקש תרגום. ההחלטה ״נמצא או לא״ היא שלכם, מול הטקסט המקורי.</p>
-  <h3>בדיקה עצמית</h3>
-  <ul class="check">
-    <li>פתחתי בעצמי כל אחד מ-5 המקורות.</li>
-    <li>יש בטבלה לפחות תוצאה אחת שאינה ״נמצא״. אם הכול נמצא, בדקתי שוב את הטענה עם המספר.</li>
-    <li>לכל מקור רשמתי מי כתב ומתי.</li>
-  </ul>
-</section>
-
-<!-- METHOD -->
-<section id="method" style="--c:var(--p1)">
-  <span class="tag">דף עזר</span>
-  <h2>ארבע תוצאות, וארבע שאלות על המקור</h2>
-  <table>
-    <tr><th>תוצאה</th><th>מה זה אומר</th><th>מה עושים</th></tr>
-    <tr><td><span class="chip" style="background:var(--p1)">נמצא</span></td><td>כתוב במקור, כמו שהוא</td><td>משתמשים, עם הפניה</td></tr>
-    <tr><td><span class="chip" style="background:var(--p3)">נמצא בשינוי</span></td><td>כתוב, אבל אחרת: מספר אחר, הקשר אחר, הכללה</td><td>מתקנים לפי המקור</td></tr>
-    <tr><td><span class="chip" style="background:var(--p4)">לא נמצא</span></td><td>המקור לא אומר את זה</td><td>מוחקים, או מחפשים מקור אחר</td></tr>
-    <tr><td><span class="chip" style="background:#9298A4">לא נפתח</span></td><td>קישור שבור, חסום או בתשלום</td><td>לא מסתמכים עד שנמצא מקור שנפתח</td></tr>
-  </table>
-  <h3>איכות המקור</h3>
-  <ul style="padding-right:20px">
-    <li><b>מי כתב?</b> חוקר, משרד ממשלתי, עיתונאי, חברה מסחרית.</li>
-    <li><b>מתי?</b> נתון ישן על שוק העבודה כבר לא מתאר את היום.</li>
-    <li><b>מה סוג המקור?</b> מחקר, סקר, כתבה, בלוג.</li>
-    <li><b>יש לו אינטרס?</b> חברה שמוכרת את הפתרון לבעיה שהיא מתארת.</li>
-  </ul>
-  <h3>דגלים אדומים בתשובה של AI</h3>
-  <p>מספר מדויק מדי · שם של מחקר או מוסד · ציטוט במירכאות עם שם של אדם · קישור. כל אחד מהם הוא סימן לבדוק, לא הוכחה לטעות.</p>
+  <div class="prompt"><button data-copy>העתקה</button><span>חקור: [הנושא]. מה ידוע עליו מהמחקר ומדוחות של השנים האחרונות, ומה ארגונים עושים בפועל? התמקד במחקרים, בדוחות רשמיים ובסקרים. בסוף: רשימת המקורות החשובים ביותר, עם שנה לכל אחד.</span></div>
+  <p class="note">נגמרה המכסה החינמית? אותה שאלה ב-Perplexity, ובבחירת המקורות סמנו Academic.</p>
 </section>
 
 <!-- HOMEWORK -->
 <section id="hw" style="--c:var(--p2)">
-  <span class="tag">מטלת בית 1 · חלק ב׳</span>
-  <h2>דוח מחקר עם טבלת אימות</h2>
-  <div class="meta"><span>הגשה: שבוע 4</span><span>בזוגות</span><span>מסמך אחד עם חלק א׳</span><span>10% מהציון</span></div>
+  <span class="tag">מטלת בית 1 · 10% מהציון</span>
+  <h2>מחקר, ועוזר שעובד עליו</h2>
+  <div class="meta"><span>הגשה: שבוע 4</span><span>בזוגות</span><span>מסמך אחד, עד 4 עמודים</span></div>
+  <p>המטלה מחברת את שני השיעורים: מוצאים מקורות על נושא (שיעור 3), ובונים עליהם עוזר ב-ChatGPT (שיעור 2).</p>
+  <div class="flow">
+    <div style="--c:var(--p2)"><b>1</b><span>בוחרים נושא</span><small>שיעור 3</small></div>
+    <div style="--c:var(--p2)"><b>2</b><span>מוצאים 3-5 מקורות</span><small>שיעור 3</small></div>
+    <div style="--c:var(--p2)"><b>3</b><span>בודקים 3 טענות</span><small>שיעור 3</small></div>
+    <div style="--c:var(--p3)"><b>4</b><span>בונים עוזר</span><small>שיעור 2</small></div>
+    <div style="--c:var(--p3)"><b>5</b><span>כותבים סיכום</span><small>שיעור 2</small></div>
+  </div>
+
+  <h3>1. בחרו נושא</h3>
+  <div class="topics">
+    <div><b>שחיקה בעבודה</b><span>למה עובדים נשחקים, ומה ארגונים עושים</span></div>
+    <div><b>עבודה היברידית</b><span>השפעה על צוותים, תקשורת ושייכות</span></div>
+    <div><b>קליטת עובדים חדשים</b><span>מה עובד ב-90 הימים הראשונים</span></div>
+    <div><b>שימור עובדים צעירים</b><span>מה גורם לדור Z להישאר או לעזוב</span></div>
+    <div><b>גיוון והכלה</b><span>מה עובד בפועל, ומה נשאר על הנייר</span></div>
+    <div><b>AI בארגונים</b><span>איך תפקידים משתנים, ומה עובדים מרגישים</span></div>
+  </div>
+
+  <h3>2. מצאו 3-5 מקורות</h3>
+  <p>עם Deep Research (תרגיל 2) או Perplexity. העדיפו מחקרים, דוחות רשמיים וסקרים. שמרו כל מקור כ-PDF (במחשב: Ctrl+P ← שמירה כ-PDF).</p>
+
+  <h3>3. בדקו 3 טענות</h3>
+  <p>בחרו 3 טענות מהמחקר, ובדקו כל אחת מול המקור שלה.</p>
+  <table>
+    <tr><th>#</th><th>טענה</th><th>מקור</th><th>תוצאה</th></tr>
+    <tr><td>1</td><td></td><td></td><td>נמצא · בשינוי · לא נמצא · לא נפתח</td></tr>
+    <tr><td>2</td><td></td><td></td><td></td></tr>
+    <tr><td>3</td><td></td><td></td><td></td></tr>
+  </table>
+  <a class="dl" href="files/טבלת_אימות_מקורות.docx" download>תבנית הטבלה (Word)</a>
+
+  <h3>4. בנו עוזר ב-ChatGPT</h3>
+  <p>פרויקט חדש ב-ChatGPT Projects, בדיוק כמו בשיעור 2: המקורות כקבצים, והוראות לפי התבנית.</p>
+  <div class="prompt"><button data-copy>העתקה</button><span>תפקיד: אתה עוזר מחקר בנושא [הנושא].
+מטרה: לעזור לנו להבין מה ידוע על הנושא, ולכתוב סיכום של עמוד אחד.
+שיטה: לפני משימה גדולה, שאל עד 3 שאלות הבהרה.
+מקורות: ענה רק על סמך הקבצים המצורפים, וציין שם קובץ לכל טענה. אם מידע לא מופיע, כתוב ״לא מופיע בקבצים״.
+פורמט: עברית פשוטה. עד 200 מילים, אלא אם ביקשנו יותר.
+גבולות: אל תמציא נתונים או ציטוטים.</span></div>
+  <p>שאלו את העוזר 3 שאלות. אחת מהן על משהו שלא מופיע במקורות, כדי לראות שהוא לא ממציא.</p>
+
+  <h3>5. כתבו סיכום עם העוזר</h3>
+  <div class="prompt"><button data-copy>העתקה</button><span>כתוב סיכום של עמוד אחד על [הנושא]: 3 ממצאים מרכזיים, לכל ממצא משפט הסבר ושם הקובץ. בסוף: מה זה אומר לארגונים, ב-2 משפטים.</span></div>
+  <p class="note">את הסיכום אתם עורכים. בדקו שכל ממצא באמת מופיע בקובץ שהעוזר ציין.</p>
+
+  <h3>מה מגישים: מסמך אחד</h3>
   <ol class="steps">
-    <li>על הנושא שבחרתם בחלק א׳: נסחו שאלת מחקר אחת, ממוקדת.</li>
-    <li>חקרו ב-Perplexity, עם תבנית הפרומפט מתרגיל 1. Deep Research מותר, אבל לא חובה.</li>
-    <li>נתחו וכתבו בעזרת העוזר שבניתם בחלק א׳.</li>
-    <li>דוח של עד 2 עמודים: 3-5 ממצאים, ומה המשמעות לארגונים.</li>
-    <li>טבלת אימות של 5 טענות מהדוח, לפי התבנית.</li>
+    <li>הנושא, ורשימת המקורות עם קישור ושנה.</li>
+    <li>טבלת הבדיקה של 3 הטענות.</li>
+    <li>ההוראות של העוזר.</li>
+    <li>3 השאלות ששאלתם את העוזר, עם התשובות (צילום מסך).</li>
+    <li>הסיכום, עמוד אחד.</li>
   </ol>
-  <p>ההנחיות המלאות לחלק א׳ והמחוון נמצאים ב<a href="../02/#hw1">ערכת שיעור 2</a>. טבלת אימות שמראה בכנות טענה שלא נמצאה מקבלת ניקוד מלא.</p>
+
+  <h3>מחוון · 100 נקודות</h3>
+  <table>
+    <tr><th>רכיב</th><th>נק׳</th><th>מה בודקים</th></tr>
+    <tr><td><b>מקורות ובדיקה</b></td><td>30</td><td>3-5 מקורות רלוונטיים, ו-3 טענות שנבדקו בכנות מול המקור</td></tr>
+    <tr><td><b>העוזר</b></td><td>30</td><td>הוראות לפי התבנית, 3 שאלות כולל שאלה שאין לה תשובה במקורות</td></tr>
+    <tr><td><b>הסיכום</b></td><td>30</td><td>3 ממצאים ברורים, לכל אחד מקור, ומשמעות לארגונים</td></tr>
+    <tr><td><b>כתיבה</b></td><td>10</td><td>קצר, מסודר, קל לקריאה</td></tr>
+  </table>
+  <p class="note">טענה שבדקתם ולא מצאתם במקור, ודיווחתם עליה בכנות, מקבלת ניקוד מלא.</p>
 </section>
 </div>
 <script>

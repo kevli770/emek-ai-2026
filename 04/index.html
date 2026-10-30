@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>שיעור 4 · ערכה</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@700;900&family=IBM+Plex+Sans+Hebrew:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1C2230;--soft:#3A4150;--mute:#666D7C;--line:#DCD4C5;--paper:#F4F1EA;--card:#fff;--tint:#EDE8DF;
+  --p1:#1E9A5E;--p2:#2F6BC2;--p3:#C07A12;--p4:#D2553A;
+  --serif:'Frank Ruhl Libre',serif;--sans:'IBM Plex Sans Hebrew',sans-serif;--mono:'IBM Plex Mono',monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font:17px/1.65 var(--sans)}
+.wrap{max-width:900px;margin:0 auto;padding:40px 16px 80px}
+header{border-bottom:2px solid var(--ink);padding-bottom:20px}
+header .k{font:600 13px var(--mono);letter-spacing:.12em;color:var(--mute)}
+header h1{font:900 50px/1.1 var(--serif);margin-top:8px}
+header p{color:var(--mute);margin-top:6px}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 6px}
+nav a{font:600 14px var(--sans);color:var(--ink);text-decoration:none;border:1px solid var(--line);background:var(--card);border-radius:99px;padding:6px 14px}
+section{margin-top:44px}
+.tag{font:600 12px var(--mono);letter-spacing:.12em;color:var(--c,var(--mute));display:block}
+h2{font:900 36px/1.15 var(--serif);margin:6px 0 6px}
+h3{font-size:19px;margin:24px 0 8px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 14px}
+.meta span{font:600 13px var(--sans);border:1px solid var(--line);border-radius:99px;padding:3px 12px;background:var(--card)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-top:12px}
+ol.steps{list-style:none;counter-reset:s;display:flex;flex-direction:column;gap:8px;margin-top:8px}
+ol.steps li{counter-increment:s;display:flex;gap:14px;align-items:baseline}
+ol.steps li::before{content:counter(s);font:600 13px var(--mono);width:26px;height:26px;border-radius:7px;border:1px solid var(--c,var(--ink));color:var(--c,var(--ink));display:grid;place-items:center;flex:none;transform:translateY(5px)}
+.prompt{position:relative;background:var(--tint);border:1px dashed #CFC6B5;border-radius:12px;padding:16px 20px 16px 96px;margin-top:10px;white-space:pre-line}
+.prompt button{position:absolute;left:12px;top:12px;background:var(--ink);color:#fff;border:0;border-radius:8px;padding:6px 12px;font:600 13px var(--sans);cursor:pointer}
+.dl{display:inline-flex;align-items:center;gap:10px;margin-top:12px;background:var(--ink);color:#fff;text-decoration:none;border-radius:12px;padding:12px 20px;font-weight:600}
+.files{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.files a{font:500 14px var(--sans);color:var(--ink);border:1px solid var(--line);background:var(--card);border-radius:8px;padding:6px 12px;text-decoration:none}
+.opt{display:grid;grid-template-columns:34px 1fr;gap:4px 12px;margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.opt>b{font:900 26px/1 var(--serif);color:var(--c)}
+.opt h4{font-size:18px}
+.check li{list-style:none;padding-right:28px;position:relative;margin-top:6px}
+.check li::before{content:"";position:absolute;right:0;top:6px;width:16px;height:16px;border:2px solid var(--ink);border-radius:4px}
+table{width:100%;border-collapse:collapse;margin-top:10px;background:var(--card);font-size:15.5px}
+th,td{border:1px solid var(--line);padding:9px 12px;text-align:right;vertical-align:top}
+th{background:var(--tint);font-weight:600}
+td.blank{height:40px}
+.note{font-size:14.5px;color:var(--mute);margin-top:8px}
+@media (max-width:640px){header h1{font-size:38px}table{display:block;overflow-x:auto}.prompt{padding:52px 16px 16px}}
+@media print{nav,.prompt button,.dl{display:none}section{break-before:page}section:first-of-type{break-before:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <span class="k">שיעור 4 · ניהול ידע ארגוני ומצגות · Gemini Notebook</span>
+  <h1>ערכת השיעור</h1>
+  <p>בינה מלאכותית ויישומיה בארגונים · האקדמית עמק יזרעאל · קווין גל ליאקס</p>
+</header>
+<nav><a href="#files">הקבצים</a><a href="#ex1">תרגיל 1</a><a href="#ex2">תרגיל 2</a><a href="#ex3">תרגיל 3</a><a href="#checks">4 בדיקות</a><a href="#keep">מה שומרים</a><a href="../03/">ערכת שיעור 3</a></nav>
+
+<!-- FILES -->
+<section id="files" style="--c:var(--p2)">
+  <span class="tag">לפני שמתחילים</span>
+  <h2>הכלי והקבצים</h2>
+  <p><b>Gemini Notebook</b> בכתובת <span dir="ltr">notebook.google.com</span>. עד יולי 2026 הכלי נקרא NotebookLM, ורוב המדריכים ברשת עדיין משתמשים בשם הישן. נכנסים עם חשבון Google אישי. עובדים בזוגות: מחשב אחד, חשבון אחד.</p>
+  <p style="margin-top:8px">5 הקבצים של מרפאות אופק, אותם קבצים משיעור 2:</p>
+  <a class="dl" href="../02/files/ofek_clinics_files.zip" download>הורדת כל הקבצים (zip)</a>
+  <div class="files">
+    <a href="../02/files/01_פרופיל_הארגון.pdf">01 פרופיל הארגון</a>
+    <a href="../02/files/02_נוהל_קליטת_עובדים.pdf">02 נוהל קליטת עובדים</a>
+    <a href="../02/files/03_פרוטוקול_ישיבת_הנהלה.pdf">03 פרוטוקול ישיבת הנהלה</a>
+    <a href="../02/files/04_ראיונות_יציאה.pdf">04 ראיונות יציאה</a>
+    <a href="../02/files/05_סקר_שביעות_רצון_עובדים.csv">05 סקר שביעות רצון (CSV)</a>
+  </div>
+  <p class="note">הכלי לא מקבל את קובץ ה-CSV? פתחו אותו ב-Google Sheets, והוסיפו אותו כמקור מ-Google Drive. לא מצליח? עבדו עם 4 קובצי ה-PDF.</p>
+  <div class="card"><b>פרטיות.</b> מרפאות אופק הוא ארגון בדוי, ולכן מותר להעלות את הקבצים. מסמכים של מקום עבודה אמיתי, של מטופלים או של לקוחות לא מעלים לחשבון פרטי.</div>
+</section>
+
+<!-- EX 1 -->
+<section id="ex1" style="--c:var(--p3)">
+  <span class="tag">תרגיל 1</span>
+  <h2>שלוש סיבות לעזיבה, עם ציטוט</h2>
+  <div class="meta"><span>20 דקות</span><span>בזוגות</span><span>Gemini Notebook, גרסה חינמית</span></div>
+  <p><b>מטרה:</b> למצוא במסמכים את הסיבות המרכזיות לעזיבה של אנשי קבלה, עם ציטוט לכל סיבה, ולבדוק שהציטוטים באמת שם.</p>
+  <h3>שלבים</h3>
+  <ol class="steps">
+    <li><span>פתחו מחברת חדשה ב-<span dir="ltr">notebook.google.com</span>, ותנו לה שם: ״מרפאות אופק״.</span></li>
+    <li><span>העלו את 5 הקבצים כמקורות.</span></li>
+    <li><span>הדביקו את הפרומפט בצ׳אט.</span></li>
+    <li><span>לחצו על לפחות 2 מספרי מקור בתשובה. המשפט באמת מופיע שם?</span></li>
+    <li><span>שאלו: ״מה תקציב הגיוס השנתי של הרשת?״ ובדקו מה הכלי עונה.</span></li>
+  </ol>
+  <h3>הפרומפט</h3>
+  <div class="prompt"><button data-copy>העתקה</button><span>על סמך המקורות בלבד:
+1. מהן 3 הסיבות המרכזיות לעזיבה של אנשי קבלה במרפאות אופק?
+2. לכל סיבה: משפט אחד, ציטוט מדויק, ושם המסמך.
+3. אם שני מסמכים סותרים זה את זה, כתוב את הסתירה.
+4. מה שלא מופיע במקורות, כתוב שהוא לא מופיע.</span></div>
+  <h3>סיימתם? שאלת המשך</h3>
+  <div class="prompt"><button data-copy>העתקה</button><span>המנכ״ל אומר שהבעיה היא השכר. מה במקורות תומך בזה, ומה לא? ציין מקור לכל נקודה.</span></div>
+  <h3>בדיקה עצמית</h3>
+  <ul class="check">
+    <li>לכל סיבה יש מספר מקור, ולחצתם ובדקתם לפחות 2.</li>
+    <li>מצאתם סתירה בין הנוהל (מסמך 02) לבין מה שקורה בפועל (מסמכים 03 ו-04).</li>
+    <li>על תקציב הגיוס קיבלתם ״לא מופיע במקורות״. קיבלתם מספר? בדקו מאיפה הוא בא.</li>
+  </ul>
+  <p class="note">טיפ: סקירה קולית לוקחת כמה דקות להיווצר. רוצים אותה לתרגיל 2? לחצו עליה כבר עכשיו, והמשיכו לעבוד.</p>
+</section>
+
+<!-- EX 2 -->
+<section id="ex2" style="--c:var(--p3)">
+  <span class="tag">תרגיל 2</span>
+  <h2>בחרו תוצר אחד, והתאימו אותו לקהל</h2>
+  <div class="meta"><span>10 דקות</span><span>בזוגות</span><span>Studio</span></div>
+  <p><b>מטרה:</b> להפיק תוצר אחד מאותם מקורות, ולהתאים אותו לקהל מסוים. ההתאמה נמצאת בעיפרון (״התאמה אישית״) שליד כל תוצר.</p>
+  <div class="opt"><b>א</b><div><h4>סקירה קולית למנכ״ל</h4>
+    <div class="prompt"><button data-copy>העתקה</button><span>התמקדו בפער בין הנוהל לבין מה שקורה בפועל בקליטת אנשי קבלה. הקהל: מנכ״ל שחושב שהבעיה היא השכר. ציינו מספרים מהמסמכים.</span></div></div></div>
+  <div class="opt"><b>ב</b><div><h4>מפת חשיבה</h4><p>צרו מפת חשיבה. לחצו על ענף אחד: הכלי ישלח עליו שאלה לצ׳אט. בדקו את התשובה מול המקור.</p></div></div>
+  <div class="opt"><b>ג</b><div><h4>תדריך לדנה</h4><p>דוחות ← דוח בהנחיה שלכם:</p>
+    <div class="prompt"><button data-copy>העתקה</button><span>תדריך של עמוד אחד לדנה אברהם, מנהלת משאבי אנוש: 3 ממצאים, ציטוט לכל ממצא, ו-3 שאלות שהמסמכים לא עונים עליהן.</span></div></div></div>
+  <h3>בדיקה עצמית</h3>
+  <ul class="check">
+    <li>מצאתם בתוצר משפט אחד שלא מופיע במקורות, או בדקתם ואין כזה.</li>
+    <li>התוצר מתאים לקהל שבחרתם: הוא מדבר על מה שחשוב לו.</li>
+  </ul>
+</section>
+
+<!-- EX 3 -->
+<section id="ex3" style="--c:var(--p3)">
+  <span class="tag">תרגיל 3</span>
+  <h2>מצגת ממצאים: מפיקים, בודקים, מתקנים</h2>
+  <div class="meta"><span>20 דקות</span><span>בזוגות</span><span>Studio ← מצגת</span></div>
+  <p><b>מטרה:</b> טיוטת מצגת ממצאים להנהלת מרפאות אופק, אחרי בדיקה ותיקון. המצגת שהכלי מפיק היא טיוטה. הבדיקה היא העבודה שלכם.</p>
+  <h3>שלבים</h3>
+  <ol class="steps">
+    <li><span>ב-Studio בחרו ״מצגת״, לחצו על העיפרון, והדביקו את ההנחיה.</span></li>
+    <li><span>בזמן שהמצגת נוצרת, פתחו את <a href="#checks">4 הבדיקות</a>.</span></li>
+    <li><span>עברו שקף אחרי שקף. כל מספר: לחצו או חפשו אותו במקור.</span></li>
+    <li><span>מצאו לפחות טעות אחת ותקנו: בבקשת תיקון לשקף, או בעריכה אחרי הורדה.</span></li>
+    <li><span>שמרו את המצגת, ומלאו את טבלת התיקונים למטה.</span></li>
+  </ol>
+  <h3>ההנחיה למצגת</h3>
+  <div class="prompt"><button data-copy>העתקה</button><span>מצגת של 6 שקפים להנהלת מרפאות אופק על התחלופה באנשי קבלה.
+קהל: המנכ״ל, שחושב שהבעיה היא השכר.
+בכל שקף: כותרת שהיא המסר, לא הנושא.
+כל מספר עם שם המסמך שממנו הוא לקוח.
+שקף אחרון: 3 שאלות שהמסמכים לא עונים עליהן.</span></div>
+  <div class="card"><b>יצירת מצגת לא זמינה, או שהעברית בשקפים משובשת?</b> בקשו בצ׳אט את אותה מצגת כטקסט:
+    <div class="prompt"><button data-copy>העתקה</button><span>כתוב את המצגת שקף אחרי שקף: כותרת שהיא מסר, 3 נקודות, ומקור לכל נקודה.</span></div>
+    <p class="note">ואז בנו אותה ב-Google Slides או ב-PowerPoint.</p></div>
+  <h3>טבלת תיקונים</h3>
+  <table>
+    <tr><th>#</th><th>שקף</th><th>מה היה כתוב</th><th>מה תיקנתם, ולמה</th></tr>
+    <tr><td>1</td><td class="blank"></td><td></td><td></td></tr>
+    <tr><td>2</td><td class="blank"></td><td></td><td></td></tr>
+    <tr><td>3</td><td class="blank"></td><td></td><td></td></tr>
+  </table>
+</section>
+
+<!-- CHECKS -->
+<section id="checks" style="--c:var(--p2)">
+  <span class="tag">4 בדיקות</span>
+  <h2>לפני שמצגת יוצאת להנהלה</h2>
+  <table>
+    <tr><th>#</th><th>בדיקה</th><th>איך בודקים</th></tr>
+    <tr><td>1</td><td><b>כותרת היא מסר</b></td><td>קראו רק את הכותרות. הן מספרות את הסיפור? ״גורמים לתחלופה״ הוא נושא. ״אנשי קבלה עוזבים לפני שהם נקלטים״ הוא מסר.</td></tr>
+    <tr><td>2</td><td><b>כל מספר נמצא במקור</b></td><td>כל מספר: לחצו על המקור או חפשו אותו במסמך. ממוצעים שהכלי חישב מהסקר בודקים ב-Google Sheets.</td></tr>
+    <tr><td>3</td><td><b>הסתירה בפנים</b></td><td>הנוהל (02) מבטיח דבר אחד, והפרוטוקול והראיונות (03, 04) מתארים דבר אחר. זה מופיע במצגת?</td></tr>
+    <tr><td>4</td><td><b>מה חסר, כתוב</b></td><td>מה המסמכים לא אומרים, ולמה זה חשוב להחלטה? למשל: על מה לא נערכו ראיונות, ואילו נתונים לא נאספו.</td></tr>
+  </table>
+</section>
+
+<!-- KEEP -->
+<section id="keep" style="--c:var(--p1)">
+  <span class="tag">מה שומרים</span>
+  <h2>שמרו את המחברת</h2>
+  <ol class="steps">
+    <li><span><b>המחברת</b> עם 5 המקורות. בשיעור 6 מוסיפים לה תמלול של ראיון מוקלט, וממשיכים לעבוד בה.</span></li>
+    <li><span><b>טיוטת המצגת</b> וטבלת התיקונים. זה הבסיס למטלה 2: דוח ממצאים ומצגת הנהלה, הגשה בשבוע 7.</span></li>
+  </ol>
+</section>
+</div>
+<script>
+document.querySelectorAll('[data-copy]').forEach(b=>b.onclick=()=>{const t=b.nextElementSibling.innerText;
+  const ok=()=>{b.textContent='הועתק ✓';setTimeout(()=>b.textContent='העתקה',1500)};
+  try{navigator.clipboard.writeText(t).then(ok,()=>{const r=document.createRange();r.selectNodeContents(b.nextElementSibling);getSelection().removeAllRanges();getSelection().addRange(r);b.textContent='סומן: Ctrl+C'})}catch(e){}});
+</script>
+</body>
+</html>

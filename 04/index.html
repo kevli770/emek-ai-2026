@@ -45,8 +45,16 @@ table{width:100%;border-collapse:collapse;margin-top:10px;background:var(--card)
 th,td{border:1px solid var(--line);padding:9px 12px;text-align:right;vertical-align:top}
 th{background:var(--tint);font-weight:600}
 td.blank{height:40px}
+.topics{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.topics div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
+.topics b{display:block;font-size:17px}.topics span{font-size:14.5px;color:var(--mute)}
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:12px}
+.flow div{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--c);border-radius:12px;padding:12px}
+.flow b{font:900 26px/1 var(--serif);color:var(--c);display:block}
+.flow span{font-size:14.5px;display:block;margin-top:4px}
+.flow small{font:600 11px var(--mono);color:var(--c)}
 .note{font-size:14.5px;color:var(--mute);margin-top:8px}
-@media (max-width:640px){header h1{font-size:38px}table{display:block;overflow-x:auto}.prompt{padding:52px 16px 16px}}
+@media (max-width:640px){header h1{font-size:38px}.topics{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}table{display:block;overflow-x:auto}.prompt{padding:52px 16px 16px}}
 @media print{nav,.prompt button,.dl{display:none}section{break-before:page}section:first-of-type{break-before:auto}}
 </style>
 </head>
@@ -57,7 +65,83 @@ td.blank{height:40px}
   <h1>ערכת השיעור</h1>
   <p>בינה מלאכותית ויישומיה בארגונים · האקדמית עמק יזרעאל · קווין גל ליאקס</p>
 </header>
-<nav><a href="#files">הקבצים</a><a href="#ex1">תרגיל 1</a><a href="#ex2">תרגיל 2</a><a href="#ex3">תרגיל 3</a><a href="#checks">4 בדיקות</a><a href="#keep">מה שומרים</a><a href="../03/">ערכת שיעור 3</a></nav>
+<nav><a href="#dr">Deep Research</a><a href="#hw">מטלת בית 1</a><a href="#files">הקבצים</a><a href="#ex1">תרגיל 1</a><a href="#ex2">תרגיל 2</a><a href="#ex3">תרגיל 3</a><a href="#checks">4 בדיקות</a><a href="#keep">מה שומרים</a><a href="../03/">ערכת שיעור 3</a></nav>
+
+<!-- DEEP RESEARCH (completion of lesson 3) -->
+<section id="dr" style="--c:var(--p1)">
+  <span class="tag">השלמה משיעור 3 · 5 דקות · בזוגות</span>
+  <h2>מפעילים Deep Research, והוא עובד בזמן השיעור</h2>
+  <p>חיפוש (כמו Perplexity) עונה על שאלה תוך שניות. Deep Research כותב תוכנית מחקר, מחכה לאישור שלכם, ואז עובד לבד 5-10 דקות וכותב דוח עם רשימת מקורות. זה צעד 2 של <a href="#hw">מטלת בית 1</a>.</p>
+  <ol class="steps">
+    <li><span>בחרו נושא מהרשימה של <a href="#hw">מטלת הבית</a> (למטה).</span></li>
+    <li><span>היכנסו ל-<b>gemini.google.com</b>, לחצו על + ליד שורת הכתיבה, ובחרו Deep Research.</span></li>
+    <li><span>הדביקו את הפרומפט עם הנושא שלכם. Gemini יציג תוכנית מחקר: אפשר לערוך אותה, ואז לוחצים על התחלת מחקר (Start research).</span></li>
+    <li><span>השאירו את הלשונית פתוחה, וממשיכים לתרגילים של Gemini Notebook.</span></li>
+    <li><span>בסוף השיעור: בדקו שהדוח הסתיים, ולחצו על ייצוא ל-Google Docs (Export to Docs).</span></li>
+  </ol>
+  <div class="prompt"><button data-copy>העתקה</button><span>חקור: [הנושא]. מה ידוע עליו מהמחקר ומדוחות של השנים האחרונות, ומה ארגונים עושים בפועל? התמקד במחקרים, בדוחות רשמיים ובסקרים. בסוף: רשימת המקורות החשובים ביותר, עם שנה לכל אחד.</span></div>
+  <p class="note">נגמרה המכסה החינמית, או אין חשבון Google? אותה שאלה ב-Perplexity, ובבחירת המקורות סמנו Academic. דוח ארוך עם הרבה מקורות עדיין צריך בדיקה: מה שלמדנו בשיעור 3 על אימות מקורות תקף גם כאן.</p>
+</section>
+
+<!-- HOMEWORK -->
+<section id="hw" style="--c:var(--p1)">
+  <span class="tag">מטלת בית 1</span>
+  <h2>מחקר, ועוזר שעובד עליו</h2>
+  <div class="meta"><span>הגשה: עד שיעור 5</span><span>בזוגות</span><span>ציון: הגיש / לא הגיש</span></div>
+  <p>המטלה מחברת את שני השיעורים: מחקר עם Deep Research (שיעור 3), ועוזר ב-ChatGPT שעובד על המחקר (שיעור 2).</p>
+  <div class="flow">
+    <div style="--c:var(--p2)"><b>1</b><span>בוחרים נושא</span><small>שיעור 3</small></div>
+    <div style="--c:var(--p2)"><b>2</b><span>Deep Research</span><small>שיעור 3</small></div>
+    <div style="--c:var(--p2)"><b>3</b><span>שומרים כ-PDF</span><small>שיעור 3</small></div>
+    <div style="--c:var(--p3)"><b>4</b><span>בונים עוזר</span><small>שיעור 2</small></div>
+    <div style="--c:var(--p3)"><b>5</b><span>מפיקים תוצר</span><small>שיעור 2</small></div>
+  </div>
+
+  <h3>1. בחרו נושא</h3>
+  <div class="topics">
+    <div><b>שחיקה בעבודה</b><span>למה עובדים נשחקים, ומה ארגונים עושים</span></div>
+    <div><b>עבודה היברידית</b><span>השפעה על צוותים, תקשורת ושייכות</span></div>
+    <div><b>קליטת עובדים חדשים</b><span>מה עובד ב-90 הימים הראשונים</span></div>
+    <div><b>שימור עובדים צעירים</b><span>מה גורם לדור Z להישאר או לעזוב</span></div>
+    <div><b>גיוון והכלה</b><span>מה עובד בפועל, ומה נשאר על הנייר</span></div>
+    <div><b>AI בארגונים</b><span>איך תפקידים משתנים, ומה עובדים מרגישים</span></div>
+  </div>
+
+  <h3>2. הריצו Deep Research על הנושא</h3>
+  <p>ב-Gemini, עם הפרומפט של <a href="#dr">Deep Research</a> (למעלה). נגמרה המכסה? אותה שאלה ב-Perplexity.</p>
+
+  <h3>3. שמרו את המחקר כקבצי PDF</h3>
+  <ol class="steps">
+    <li><span><b>הדוח עצמו:</b> בראש הדוח ב-Gemini לחצו על ייצוא ל-Google Docs (Export to Docs). ב-Docs: קובץ ← הורדה ← PDF.</span></li>
+    <li><span><b>2-4 מקורות מתוך הדוח:</b> פתחו כל מקור, ושמרו אותו כ-PDF (במחשב: Ctrl+P ← יעד: שמירה כ-PDF).</span></li>
+    <li><span>יש לכם עכשיו 3-5 קבצים. זה בדיוק מה שנכנס לפרויקט בחינם (עד 5 קבצים).</span></li>
+  </ol>
+
+  <h3>4. בנו עוזר ב-ChatGPT</h3>
+  <p>פרויקט חדש ב-ChatGPT Projects, כמו בשיעור 2: Add files ← הקבצים מצעד 3, ו-Instructions ← ההוראות הבאות.</p>
+  <div class="prompt"><button data-copy>העתקה</button><span>תפקיד: אתה עוזר מחקר בנושא [הנושא], של צוות ייעוץ שעובד עם רשת "מרפאות אופק".
+מטרה: לעזור לנו להפוך את המחקר בקבצים להמלצות ולתוצרים ללקוחה, דנה אברהם, מנהלת משאבי האנוש.
+שיטה: לפני משימה גדולה, שאל עד 3 שאלות הבהרה.
+מקורות: ענה רק על סמך הקבצים המצורפים, וציין שם קובץ לכל טענה. אם מידע לא מופיע, כתוב ״לא מופיע בקבצים״.
+פורמט: עברית פשוטה. טבלה כשמשווים. עד 200 מילים, אלא אם ביקשנו יותר.
+גבולות: אל תמציא נתונים או ציטוטים.</span></div>
+
+  <h3>5. הפיקו תוצר אחד לדנה</h3>
+  <p>בחרו אחד (או יותר), והריצו בשיחה בתוך הפרויקט.</p>
+  <p><b>A · מייל לדנה</b></p>
+  <div class="prompt"><button data-copy>העתקה</button><span>כתוב מייל לדנה אברהם, מנהלת משאבי האנוש של מרפאות אופק: מה המחקר אומר על [הנושא], ב-3 נקודות עם שם קובץ לכל אחת, ומה כדאי לבדוק אצלם. עד 150 מילים, טון מקצועי.</span></div>
+  <p style="margin-top:14px"><b>B · 5 המלצות למרפאות אופק</b></p>
+  <div class="prompt"><button data-copy>העתקה</button><span>הצע 5 המלצות למרפאות אופק בנושא [הנושא], על סמך הקבצים בלבד. לכל המלצה: מה לעשות, למה (עם שם קובץ), ומה הצעד הראשון. הצג בטבלה.</span></div>
+  <p style="margin-top:14px"><b>C · שאלות לסקר עובדים</b></p>
+  <div class="prompt"><button data-copy>העתקה</button><span>נסח 10 שאלות לסקר עובדים במרפאות אופק בנושא [הנושא], שמבוססות על הממצאים בקבצים. טבלה: שאלה · מה היא בודקת · סוג תשובה (סולם 1-5 או פתוחה).</span></div>
+
+  <h3>מה מגישים: קובץ אחד (Word או PDF)</h3>
+  <ol class="steps">
+    <li><span>הנושא, ורשימת הקבצים שהעליתם לעוזר.</span></li>
+    <li><span>ההוראות של העוזר.</span></li>
+    <li><span>התוצר שבחרתם: טקסט, או צילום מסך מתוך הפרויקט.</span></li>
+  </ol>
+</section>
 
 <!-- FILES -->
 <section id="files" style="--c:var(--p2)">
@@ -177,6 +261,7 @@ td.blank{height:40px}
   <h2>שמרו את המחברת</h2>
   <ol class="steps">
     <li><span><b>המחברת</b> עם 5 המקורות. בשיעור 6 מוסיפים לה תמלול של ראיון מוקלט, וממשיכים לעבוד בה.</span></li>
+    <li><span><b>דוח Deep Research</b>: ייצוא ל-Docs לפני שסוגרים את הלשונית. ממנו ממשיכים את <a href="#hw">מטלת בית 1</a> בבית, הגשה עד שיעור 5.</span></li>
     <li><span><b>טיוטת המצגת</b> וטבלת התיקונים. זה הבסיס למטלה 2: דוח ממצאים ומצגת הנהלה, הגשה בשבוע 7.</span></li>
   </ol>
 </section>

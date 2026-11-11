@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>שיעור 5 · ערכה</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1B2230;--mute:#6A7180;--line:#E2DCD0;--paper:#F4F1EA;--card:#fff;--g:#2556C9;--gl:#E3EAFB;--o:#A8640F;--ol:#F6EBD9;--pdf:#C0392B}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font:19px/1.5 'Heebo',sans-serif}
+.wrap{max-width:820px;margin:0 auto;padding:36px 16px 80px}
+.k{font-size:15px;color:var(--mute)}
+h1{font-size:46px;font-weight:800;line-height:1.1;margin-top:6px}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.pills span{font-size:16px;font-weight:500;background:var(--card);border:1px solid var(--line);border-radius:99px;padding:5px 14px}
+.lead{font-size:22px;margin-top:16px}
+.part{font-size:15px;font-weight:700;color:var(--g);margin-top:40px;letter-spacing:0}
+
+.step{background:var(--card);border:1px solid var(--line);border-radius:20px;margin-top:18px;overflow:hidden}
+.step .hd{display:flex;gap:16px;align-items:center;padding:22px 24px 6px}
+.step .n{flex:none;width:52px;height:52px;border-radius:50%;background:var(--g);color:#fff;font:800 26px 'Heebo';display:grid;place-items:center}
+.step h2{font-size:28px;font-weight:800;line-height:1.2}
+.step .min{margin-right:auto;font-size:15px;color:var(--mute);font-weight:500}
+.step p{padding:0 24px 0 92px;color:var(--mute);font-size:19px}
+.pic{margin:18px 24px 22px;background:var(--gl);border-radius:14px;padding:24px 20px;display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;min-height:150px}
+.btns{display:flex;flex-wrap:wrap;gap:10px;padding:0 24px 22px}
+button.cp,a.dl{font:700 17px 'Heebo';background:var(--ink);color:#fff;border:0;border-radius:12px;padding:12px 20px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+button.cp.ok{background:var(--g)}
+.check{margin:0 24px 22px;padding:12px 16px;border-right:4px solid var(--o);background:var(--ol);border-radius:8px;font-size:18px}
+.check b{color:var(--o)}
+details{padding:0 24px 22px}
+summary{cursor:pointer;color:var(--mute);font-size:16px}
+details pre{white-space:pre-wrap;font:16px/1.6 'Heebo';background:var(--paper);border-radius:10px;padding:14px 16px;margin-top:8px}
+
+/* pictures drawn in HTML */
+.chip{font-size:19px;font-weight:500;background:#fff;border:2px solid var(--line);border-radius:99px;padding:7px 16px}
+.chip.on{background:var(--g);border-color:var(--g);color:#fff}
+.vid{width:130px;background:#fff;border:2px solid var(--line);border-radius:10px;overflow:hidden}
+.vid .th{height:68px;background:#D9DEE8;display:grid;place-items:center}
+.vid .th::after{content:"";border-right:22px solid #fff;border-top:13px solid transparent;border-bottom:13px solid transparent;transform:scaleX(-1)}
+.vid b{display:block;font-size:14px;padding:6px 8px;color:var(--mute);font-weight:500}
+.row{display:flex;align-items:center;gap:12px;background:#fff;border:2px solid var(--line);border-radius:10px;padding:10px 16px;width:min(100%,520px);font-size:17px}
+.row .cb{flex:none;width:22px;height:22px;border:2px solid var(--mute);border-radius:5px;display:grid;place-items:center;font:700 14px 'Heebo';color:#fff}
+.row.on .cb{background:var(--g);border-color:var(--g)}
+.row.on .cb::before{content:"\2713"}
+.row small{margin-right:auto;color:var(--mute);font-size:14px}
+.file{width:88px;height:112px;background:#fff;border:2px solid var(--line);border-radius:8px;position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:10px;gap:6px}
+.file i{height:6px;background:var(--line);border-radius:3px;display:block}
+.file b{position:absolute;top:26px;right:10px;font:800 13px 'Heebo';color:#fff;background:var(--pdf);border-radius:4px;padding:1px 6px}
+.file.csv b{background:#2E7D4F}
+.file.zip b{background:#7A5BC4}
+.file.doc b{background:#2B579A}
+.slide{width:150px;aspect-ratio:16/9;background:#fff;border:2px solid var(--line);border-radius:6px;padding:10px;display:flex;flex-direction:column;gap:6px}
+.slide b{font-size:13px;line-height:1.25;color:#1f4e79}
+.slide i{height:5px;background:var(--line);border-radius:3px;display:block}
+.slide span{margin-top:auto;font-size:11px;color:var(--mute)}
+
+/* homework 2 */
+.hw{background:var(--g);color:#fff;border-radius:20px;margin-top:40px;padding:26px 24px}
+.hw h2{font-size:32px;font-weight:800}
+.hw .sub{opacity:.9;margin-top:4px;font-size:19px}
+.hw .pills span{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.3);color:#fff}
+.parts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
+.parts>div{background:rgba(255,255,255,.12);border-radius:14px;padding:16px}
+.parts small{font-size:14px;opacity:.85;display:block}
+.parts b{font-size:21px;display:block;margin:2px 0 6px}
+.parts span{font-size:16px;opacity:.92;line-height:1.4;display:block}
+.parts .now{background:#fff;color:var(--ink)}
+.parts .now small,.parts .now span{opacity:1;color:var(--mute)}
+.parts .now b{color:var(--g)}
+.hw h3{font-size:22px;font-weight:800;margin-top:26px}
+.hw ul{list-style:none;margin-top:10px;display:flex;flex-direction:column;gap:8px}
+.hw li{background:rgba(255,255,255,.12);border-radius:10px;padding:10px 14px;font-size:18px;display:flex;gap:12px;align-items:baseline}
+.hw li b{flex:none;font-weight:800}
+.hw .soon{margin-top:22px;background:rgba(255,255,255,.12);border-radius:12px;padding:12px 16px;font-size:17px}
+.hw a.dl{background:#fff;color:var(--g);margin-top:18px}
+
+@media (max-width:640px){h1{font-size:36px}.step p{padding:0 24px}.parts{grid-template-columns:1fr}.step .min{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<span class="k">שיעור 5 · בינה מלאכותית ויישומיה בארגונים · קווין גל ליאקס</span>
+<h1>מקורות, חיפוש ותוצרים ב-Gemini Notebook</h1>
+<div class="pills"><span>בזוגות</span><span>חשבון Google אישי, בחינם</span><span>notebook.google.com</span></div>
+<p class="lead">חמישה תרגילים. כל אחד עם פרומפט להעתקה. בסוף: מטלה 2.</p>
+
+<div class="part">חלק 01 · סרטונים כמקורות</div>
+
+<!-- 1 -->
+<div class="step">
+  <div class="hd"><span class="n">1</span><h2>מחברת של סרטונים</h2><span class="min">10 דקות</span></div>
+  <p>בחרו נושא שמעניין אתכם. מצאו ב-YouTube 3-4 סרטונים בעמדות שונות, עם כתוביות. מחברת חדשה, והדביקו את הקישורים.</p>
+  <div class="pic">
+    <div class="vid"><div class="th"></div><b>סרטון 1</b></div><div class="vid"><div class="th"></div><b>סרטון 2</b></div><div class="vid"><div class="th"></div><b>סרטון 3</b></div><div class="vid"><div class="th"></div><b>סרטון 4</b></div>
+  </div>
+  <div class="btns"><button class="cp" data-t="הנושא: [הנושא שלכם]. על סמך המקורות בלבד:
+1. מהן 3 הנקודות שחוזרות ביותר מסרטון אחד?
+2. במה הסרטונים חלוקים?
+3. לכל טענה: מספר מקור.
+4. מה שלא מופיע במקורות, כתוב שהוא לא מופיע.">העתקת הפרומפט</button></div>
+  <div class="check"><b>בדיקה:</b> לחצו על 2 מספרי מקור. המשפט באמת בתמליל? סרטון לא נקלט? כנראה אין לו כתוביות. נסו אחר.</div>
+</div>
+
+<div class="part">חלק 02 · הרחבת חיפוש</div>
+
+<!-- 2 -->
+<div class="step">
+  <div class="hd"><span class="n">2</span><h2>מוסיפים מקורות מהרשת</h2><span class="min">8 דקות</span></div>
+  <p>בחלונית המקורות: כתבו את הנושא, בחרו Web ו-Fast Research. ייבאו רק מה שהייתם סומכים עליו.</p>
+  <div class="pic" style="flex-direction:column">
+    <div class="row on"><span class="cb"></span>מחקר אקדמי<small>כתב עת</small></div>
+    <div class="row on"><span class="cb"></span>דוח של ארגון בינלאומי<small>ארגון</small></div>
+    <div class="row"><span class="cb"></span>פוסט בבלוג של חברה<small>בלוג</small></div>
+  </div>
+  <div class="btns"><button class="cp" data-t="מה המקורות החדשים מוסיפים שלא הופיע בסרטונים?
+איפה הם סותרים את הסרטונים?
+לכל טענה: מספר מקור.">העתקת הפרומפט</button></div>
+  <div class="check"><b>בדיקה:</b> מי כתב כל מקור? מתי? מחקו מקור אחד שלא הייתם סומכים עליו, וכתבו למה.</div>
+</div>
+
+<div class="part">חלק 03 · Studio</div>
+
+<!-- 3 -->
+<div class="step">
+  <div class="hd"><span class="n">3</span><h2>תוצר אחד, לקהל מסוים</h2><span class="min">8 דקות</span></div>
+  <p>בחרו תוצר, ולחצו על העיפרון (התאמה אישית) כדי לכתוב למי הוא מיועד.</p>
+  <div class="pic">
+    <span class="chip on">סקירה קולית</span><span class="chip on">מפת חשיבה</span><span class="chip on">דוח</span><span class="chip">מצגת</span><span class="chip">אינפוגרפיקה</span><span class="chip">כרטיסיות</span><span class="chip">בוחן</span><span class="chip">טבלת נתונים</span><span class="chip">סרטון</span>
+  </div>
+  <div class="btns">
+    <button class="cp" data-t="הקהל: סטודנטית שלא ראתה את הסרטונים. התמקדו במה שהכי מפתיע.">העתקה: סקירה קולית</button>
+    <button class="cp" data-t="טבלה: סרטון, עמדה מרכזית, ראיה שהוא מביא, ומה חסר בו.">העתקה: טבלה</button>
+  </div>
+  <div class="check"><b>בדיקה:</b> מצאו בתוצר משפט אחד שלא מופיע במקורות. אין כזה? כתבו גם את זה.</div>
+</div>
+
+<div class="part">חלק 04 · מרפאות אופק (בסיס למטלה 2)</div>
+
+<!-- 4 -->
+<div class="step">
+  <div class="hd"><span class="n">4</span><h2>שלוש סיבות לעזיבה, עם ציטוט</h2><span class="min">10 דקות</span></div>
+  <p>מחברת חדשה, נפרדת מהסרטונים. העלו את חמשת הקבצים.</p>
+  <div class="pic">
+    <div class="file"><b>PDF</b><i></i><i></i><i style="width:60%"></i></div>
+    <div class="file"><b>PDF</b><i></i><i></i><i style="width:70%"></i></div>
+    <div class="file"><b>PDF</b><i></i><i></i><i style="width:50%"></i></div>
+    <div class="file"><b>PDF</b><i></i><i></i><i style="width:65%"></i></div>
+    <div class="file csv"><b>CSV</b><i></i><i></i><i style="width:55%"></i></div>
+  </div>
+  <div class="btns">
+    <a class="dl" href="files/ofek_clinics_files.zip" download>הורדת 5 הקבצים (ZIP)</a>
+    <button class="cp" data-t="על סמך המקורות בלבד:
+1. מהן 3 הסיבות המרכזיות לעזיבה של אנשי קבלה במרפאות אופק?
+2. לכל סיבה: משפט אחד, ציטוט מדויק, ושם המסמך.
+3. אם שני מסמכים סותרים זה את זה, כתוב את הסתירה.
+4. מה שלא מופיע במקורות, כתוב שהוא לא מופיע.">העתקת הפרומפט</button>
+    <button class="cp" data-t="המנכ״ל אומר שהבעיה היא השכר. מה במקורות תומך בזה, ומה לא?">העתקה: שאלת המשך</button>
+  </div>
+  <details><summary>קובץ הסקר (CSV) לא נקלט?</summary><pre>פתחו אותו ב-Google Sheets, ואז הוסיפו אותו כמקור מסוג Google Sheets. או דלגו עליו היום.</pre></details>
+</div>
+
+<!-- 5 -->
+<div class="step">
+  <div class="hd"><span class="n">5</span><h2>מצגת ממצאים: מפיקים, בודקים, מתקנים</h2><span class="min">12 דקות</span></div>
+  <p>Studio ← מצגת ← עיפרון. הדביקו את ההנחיה. אחר כך בודקים כל שקף ומתקנים לפחות טעות אחת.</p>
+  <div class="pic">
+    <div class="slide"><b>אנשי קבלה עוזבים לפני שהם נקלטים</b><i></i><i style="width:70%"></i><span>מקור 03</span></div>
+    <div class="slide"><b>הנוהל לא מתקיים בדלפק</b><i></i><i style="width:60%"></i><span>מקור 02 · 04</span></div>
+    <div class="slide"><b>3 שאלות שהמסמכים לא עונים עליהן</b><i></i><i style="width:75%"></i><span>מקורות 01-05</span></div>
+  </div>
+  <div class="btns"><button class="cp" data-t="מצגת של 6 שקפים להנהלת מרפאות אופק על התחלופה באנשי קבלה.
+קהל: המנכ״ל, שחושב שהבעיה היא השכר.
+בכל שקף: כותרת שהיא המסר, לא הנושא.
+כל מספר עם שם המסמך שממנו הוא לקוח.
+שקף אחרון: 3 שאלות שהמסמכים לא עונים עליהן.">העתקת ההנחיה</button></div>
+  <div class="check"><b>4 בדיקות:</b> כל כותרת היא מסר · כל מספר נמצא במקור · הסתירה בין הנוהל לראיונות מופיעה · מה שחסר כתוב בשקף.</div>
+</div>
+
+<!-- homework 2 -->
+<div class="hw">
+  <h2>מטלה 2: דוח ממצאים ומצגת הנהלה</h2>
+  <p class="sub">על מרפאות אופק. בזוגות. 10% מהציון.</p>
+  <div class="pills"><span>בזוגות</span><span>הגיש / לא הגיש</span><span>מועד הגשה: יפורסם</span></div>
+  <div class="parts">
+    <div class="now"><small>חלק א׳ · שיעור 5</small><b>מסמכים</b><span>מחברת מרפאות אופק, 3 הסיבות עם ציטוטים, וטיוטת מצגת. אתם כבר עושים את זה היום.</span></div>
+    <div><small>חלק ב׳ · שיעור 6</small><b>תמונות</b><span>תוצרים חזותיים למצגת: אינפוגרפיקה ואיורים.</span></div>
+    <div><small>חלק ג׳ · שיעור 7</small><b>ראיון</b><span>תמלול ראיון, והוספתו לאותה מחברת.</span></div>
+  </div>
+  <h3>מה מגישים בסוף</h3>
+  <ul>
+    <li><b>1</b>דוח ממצאים קצר: הממצאים, מה בא ממסמך ומה מהראיון, ומה חסר</li>
+    <li><b>2</b>מצגת הנהלה: כותרות שהן מסר, כל מספר עם מקור, ותמונות מהשיעור על תמונות</li>
+    <li><b>3</b>קישור למחברת (שיתוף: כל מי שיש לו קישור יכול לצפות)</li>
+    <li><b>4</b>רשימת התיקונים: מה הכלי הוציא לא נכון, ומה תיקנתם</li>
+  </ul>
+  <h3>על מה נבדקים</h3>
+  <ul>
+    <li><b>✓</b>כל מספר וכל ציטוט נבדקו מול המקור</li>
+    <li><b>✓</b>הסתירות בין המסמכים לראיון מופיעות</li>
+    <li><b>✓</b>כתוב מה המקורות לא אומרים</li>
+    <li><b>✓</b>העבודה שלכם: איפה תיקנתם את הכלי</li>
+  </ul>
+  <p class="soon">חלקים ב׳ ו-ג׳ ודף ההגשה המלא יתעדכנו כאן אחרי שיעורים 6 ו-7. עד אז: שמרו את המחברת, את המצגת ואת רשימת התיקונים.</p>
+</div>
+
+</div>
+<script>
+document.querySelectorAll('button.cp').forEach(b=>{const label=b.textContent;b.onclick=()=>{
+  const done=()=>{b.textContent='הועתק ✓';b.classList.add('ok');setTimeout(()=>{b.textContent=label;b.classList.remove('ok')},1600)};
+  try{navigator.clipboard.writeText(b.dataset.t).then(done,()=>{prompt('העתיקו:',b.dataset.t)})}catch(e){prompt('העתיקו:',b.dataset.t)}}});
+</script>
+</body>
+</html>
